@@ -28,8 +28,8 @@ const products = [
   {no:22,name:"Brown Orchid",p30:300,p50:500,p100:830,cat:"oud-wood"},
   {no:23,name:"Brut",p30:220,p50:370,p100:580,cat:"fresh-citrus"},
   {no:24,name:"Bvlgari Aqva",p30:300,p50:500,p100:860,cat:"fresh-citrus"},
-  {no:25,name:"CH 212 Sexy Men",p30:250,p50:420,p100:780,cat:"oud-wood"},
-  {no:26,name:"CH Good Girl",p30:220,p50:370,p100:580,cat:"fruity-floral"},
+  {no:25,name:"212 Sexy Men",p30:250,p50:420,p100:780,cat:"oud-wood"},
+  {no:26,name:"Good Girl",p30:220,p50:370,p100:580,cat:"fruity-floral"},
   {no:27,name:"Chanel Coco",p30:290,p50:470,p100:800,cat:"luxury"},
   {no:28,name:"Chelsea",p30:260,p50:440,p100:720,cat:"fruity-floral"},
   {no:29,name:"Chembakam",p30:220,p50:370,p100:580,cat:"fruity-floral"},
@@ -66,7 +66,7 @@ const products = [
   {no:60,name:"JPG Ultramale",p30:240,p50:410,p100:660,cat:"luxury"},
   {no:61,name:"Kasturi",p30:250,p50:415,p100:680,cat:"oud-wood"},
   {no:62,name:"Lamsat Harrir",p30:270,p50:450,p100:740,cat:"fruity-floral"},
-  {no:63,name:"Louis Vuitton Afternoon",p30:560,p50:930,p100:1700,cat:"luxury"},
+  {no:63,name:"LV Afternoon",p30:560,p50:930,p100:1700,cat:"luxury"},
   {no:64,name:"Lovely",p30:200,p50:340,p100:520,cat:"fruity-floral"},
   {no:65,name:"Lux",p30:180,p50:300,p100:440,cat:"fruity-floral"},
   {no:66,name:"M & M Fresh",p30:250,p50:410,p100:660,cat:"fresh-citrus"},
@@ -109,7 +109,7 @@ const products = [
   {no:103,name:"Swiss Musk",p30:1250,p50:2080,p100:4000,cat:"fruity-floral"},
   {no:104,name:"Tam Dao",p30:650,p50:1080,p100:2000,cat:"oud-wood"},
   {no:105,name:"Tobacco Vanilla",p30:560,p50:930,p100:1700,cat:"luxury"},
-  {no:106,name:"Tom Ford Noir Extreme",p30:360,p50:600,p100:1050,cat:"luxury"},
+  {no:106,name:"Noir Extreme",p30:360,p50:600,p100:1050,cat:"luxury"},
   {no:107,name:"Tuscan Leather",p30:270,p50:450,p100:740,cat:"luxury"},
   {no:108,name:"Vanilla",p30:210,p50:340,p100:530,cat:"fruity-floral"},
   {no:109,name:"Vanilla Candy",p30:400,p50:670,p100:1180,cat:"fruity-floral"},
@@ -128,8 +128,8 @@ function getSlug(n){
   if (n === "Farenheit") return "farenheit";
   if (n === "Poison") return "poison";
   if (n === "Sauvage") return "sauvage";
-  if (n === "CH 212 Sexy Men") return "212-sexy-men";
-  if (n === "CH Good Girl") return "good-girl";
+  if (n === "212 Sexy Men") return "212-sexy-men";
+  if (n === "Good Girl") return "good-girl";
   if (n === "One & Only") return "one-only";
   if (n === "Armani Stronger with you") return "stronger-with-you";
   if (n === "JPG Ultramale") return "ultramale";
