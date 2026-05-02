@@ -1,0 +1,13 @@
+# Project specific
+Perfume_/
+*.py
+verify_images.py
+process_images.py
+convert_images.py
+
+# System/IDE
+.DS_Store
+Thumbs.db
+.gemini/
+.vscode/
+node_modules/
