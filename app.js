@@ -250,12 +250,19 @@ window.openPD=openPD;
 function selectSize(el){
   el.parentElement.querySelectorAll('.pd-size-pill').forEach(p=>p.classList.remove('active'));
   el.classList.add('active');
+  updatePDOrder();
 }
 window.selectSize=selectSize;
 
 function updatePDOrder(){
   if(!sel)return;
-  const msg=`Hi, I'd like to order:\n\n${sel.name}\n\nPlease confirm availability and sizes.`;
+  const activePill = document.querySelector('.pd-size-pill.active');
+  let sizeLabel = '30ml', sizePrice = sel.p30;
+  if(activePill){
+    sizeLabel = activePill.querySelector('.pd-size-ml').textContent.trim();
+    sizePrice = activePill.querySelector('.pd-size-price').textContent.trim();
+  }
+  const msg = `Hey there! 👋\n\nI'd like to place an order:\n\n*Product:* ${sel.name}\n*Size:* ${sizeLabel}\n*Price:* ${sizePrice}\n\nKindly confirm the availability. Thank you!`;
   pdOrd.href=`https://wa.me/919633586868?text=${encodeURIComponent(msg)}`;
 }
 
@@ -296,9 +303,30 @@ function checkNav(){
 }
 window.addEventListener('scroll',checkNav,{passive:true});
 
-const mt=$('menuToggle'),nl=$('navLinks');
-mt.addEventListener('click',()=>{mt.classList.toggle('active');nl.classList.toggle('active')});
-nl.querySelectorAll('.nav-link').forEach(l=>l.addEventListener('click',()=>{mt.classList.remove('active');nl.classList.remove('active')}));
+const mt=$('menuToggle'),nl=$('navLinks'),nb=$('navbar');
+let menuScrollLock = false;
+
+function closeMenu(){
+  mt.classList.remove('active');
+  nl.classList.remove('active');
+  nb.classList.remove('menu-active');
+  document.body.classList.remove('menu-open');
+  menuScrollLock = false;
+}
+
+mt.addEventListener('click',()=>{
+  const isOpen = nl.classList.toggle('active');
+  mt.classList.toggle('active');
+  nb.classList.toggle('menu-active', isOpen);
+  document.body.classList.toggle('menu-open', isOpen);
+  if(isOpen){
+    menuScrollLock = true;
+    setTimeout(()=>{ menuScrollLock = false; }, 400);
+  }
+});
+
+nl.querySelectorAll('.nav-link, .nav-cta').forEach(l=>l.addEventListener('click', closeMenu));
+window.addEventListener('scroll', ()=>{ if(nl.classList.contains('active') && !menuScrollLock) closeMenu(); }, {passive:true});
 
 // ---- Smooth anchor ----
 document.querySelectorAll('a[href^="#"]').forEach(a=>{

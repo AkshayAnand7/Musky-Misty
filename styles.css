@@ -34,6 +34,7 @@ h3{font-weight:500;font-size:1.25rem;letter-spacing:0}
 
 /* ===== NAV ===== */
 .navbar{position:fixed;top:0;left:0;width:100%;z-index:100;height:var(--nav-h);transition:all .4s var(--ease)}
+.navbar.menu-active{height:100vh;height:100dvh}
 .navbar.scrolled{background:rgba(248,245,240,.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
 .navbar.hero-dark:not(.scrolled){background:transparent}
 .navbar.hero-dark:not(.scrolled) .nav-logo-text,.navbar.hero-dark:not(.scrolled) .nav-link{color:rgba(255,255,255,.7)}
@@ -309,10 +310,15 @@ h3{font-weight:500;font-size:1.25rem;letter-spacing:0}
   .pd-notes{grid-template-columns:1fr 1fr 1fr}
   .pd-related-grid{grid-template-columns:1fr 1fr}
   .nav-inner{padding:0 24px}
-  .nav-links{display:none;position:fixed;inset:0;background:var(--bg);flex-direction:column;align-items:center;justify-content:center;gap:36px;z-index:100}
+  .nav-links{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;height:100dvh;background:#1A1A1A;flex-direction:column;align-items:center;justify-content:center;gap:36px;z-index:100}
   .nav-links.active{display:flex}
-  .navbar.hero-dark .nav-links.active{background:#1A1A1A}
-  .menu-toggle{display:block}
+  .nav-links .nav-link{color:rgba(255,255,255,.7);font-size:14px}
+  .nav-links .nav-link:hover{color:#fff}
+  .nav-links .nav-cta{margin-top:12px}
+  .menu-toggle{display:block;z-index:101}
+  .menu-toggle.active{position:fixed;top:24px;right:24px}
+  .menu-toggle.active span{background:#fff}
+  body.menu-open{overflow:hidden}
   .hero{padding:var(--nav-h) 24px 0}
   .hero h1{white-space:normal;font-size:clamp(2.5rem,12vw,4.5rem)}
   .hero-stats{flex-direction:row}
