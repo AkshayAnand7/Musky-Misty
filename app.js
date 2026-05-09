@@ -257,12 +257,12 @@ window.selectSize=selectSize;
 function updatePDOrder(){
   if(!sel)return;
   const activePill = document.querySelector('.pd-size-pill.active');
-  let sizeLabel = '30ml', sizePrice = sel.p30;
+  let sizeLabel = '30ml', sizePrice = `₹${sel.p30}`;
   if(activePill){
     sizeLabel = activePill.querySelector('.pd-size-ml').textContent.trim();
     sizePrice = activePill.querySelector('.pd-size-price').textContent.trim();
   }
-  const msg = `Hey there! 👋\n\nI'd like to place an order:\n\n*Product:* ${sel.name}\n*Size:* ${sizeLabel}\n*Price:* ${sizePrice}\n\nKindly confirm the availability. Thank you!`;
+  const msg = `Hey there! 👋\n\nI'd like to place an order:\n\nProduct: ${sel.name}\nSize: ${sizeLabel}\nPrice: ${sizePrice}\n\nPlease let me know if it's available 😊`;
   pdOrd.href=`https://wa.me/919633586868?text=${encodeURIComponent(msg)}`;
 }
 
