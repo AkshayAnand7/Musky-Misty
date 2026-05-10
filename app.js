@@ -329,10 +329,20 @@ nl.querySelectorAll('.nav-link, .nav-cta').forEach(l=>l.addEventListener('click'
 window.addEventListener('scroll', ()=>{ if(nl.classList.contains('active') && !menuScrollLock) closeMenu(); }, {passive:true});
 
 // ---- Smooth anchor ----
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
+document.querySelectorAll('a[href^="#"]:not([data-product])').forEach(a=>{
   a.addEventListener('click',function(e){
     const t=document.querySelector(this.getAttribute('href'));
     if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})}
+  });
+});
+
+// ---- Footer Popular Picks → open product detail ----
+document.querySelectorAll('[data-product]').forEach(a=>{
+  a.addEventListener('click',function(e){
+    e.preventDefault();
+    const name = this.dataset.product.toLowerCase();
+    const idx = products.findIndex(p => p.name.toLowerCase() === name);
+    if(idx !== -1) openPD(idx);
   });
 });
 

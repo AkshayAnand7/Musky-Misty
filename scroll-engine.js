@@ -151,7 +151,7 @@
       const text = el.textContent;
       const words = text.split(' ');
       el.innerHTML = words.map((w, i) =>
-        `<span class="word" style="display:inline-block;overflow:hidden"><span class="word-inner" style="display:inline-block;transform:translateY(105%);transition:transform 0.7s cubic-bezier(.16,1,.3,1) ${i * 0.04}s">${w}</span></span>`
+        `<span class="word" style="display:inline-block;overflow:hidden;padding-bottom:0.2em;margin-bottom:-0.2em"><span class="word-inner" style="display:inline-block;transform:translateY(105%);transition:transform 0.7s cubic-bezier(.16,1,.3,1) ${i * 0.04}s">${w}</span></span>`
       ).join(' ');
       el.dataset.splitDone = '1';
 
