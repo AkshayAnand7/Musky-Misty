@@ -266,10 +266,10 @@ function updatePDOrder(){
   pdOrd.href=`https://wa.me/919633586868?text=${encodeURIComponent(msg)}`;
 }
 
-function closePD(){prodV.style.display='none';homeV.style.display='block';history.pushState({view:'home'},'',location.pathname);window.scrollTo(0,0)}
+function closePD(){prodV.style.display='none';homeV.style.display='block';history.pushState({view:'home'},'',location.pathname);window.scrollTo(0,0);requestAnimationFrame(checkNav)}
 window.addEventListener('popstate',()=>{
   if(location.hash.includes('#/product/')){const n=parseInt(location.hash.split('/').pop(),10);const i=products.findIndex(p=>p.no===n);if(i!==-1)openPD(i);}
-  else{prodV.style.display='none';homeV.style.display='block';}
+  else{prodV.style.display='none';homeV.style.display='block';requestAnimationFrame(checkNav)}
 });
 if(pdBk)pdBk.addEventListener('click',closePD);
 
