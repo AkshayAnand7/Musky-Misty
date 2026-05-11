@@ -309,10 +309,37 @@ window.addEventListener('scroll', ()=>{ if(nl.classList.contains('active') && !m
 // ---- Smooth anchor ----
 document.querySelectorAll('a[href^="#"]:not([data-product])').forEach(a=>{
   a.addEventListener('click',function(e){
-    const t=document.querySelector(this.getAttribute('href'));
-    if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})}
+    const href = this.getAttribute('href');
+    
+    // If it's just "#" (like the logo), and we're in product view, go home
+    if(href === '#'){
+      if(prodV && prodV.style.display === 'block'){
+        e.preventDefault();
+        closePD();
+      }
+      return;
+    }
+
+    const t=document.querySelector(href);
+    if(t){
+      e.preventDefault();
+      
+      // If we are in product view, switch back to home view first
+      if(prodV && prodV.style.display === 'block'){
+        prodV.style.display = 'none';
+        homeV.style.display = 'block';
+        history.pushState({view:'home'},'',location.pathname);
+        requestAnimationFrame(checkNav);
+      }
+      
+      // Small timeout to ensure layout has updated if we just switched display:block
+      setTimeout(() => {
+        window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});
+      }, 10);
+    }
   });
 });
+
 
 // ---- Footer Popular Picks → open product detail ----
 document.querySelectorAll('[data-product]').forEach(a=>{
