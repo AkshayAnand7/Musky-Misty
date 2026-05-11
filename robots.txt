@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /assets/images/
+# Allow indexing of assets/images for image search SEO
+Allow: /assets/images/
 
 Sitemap: https://muskymisty.in/sitemap.xml
