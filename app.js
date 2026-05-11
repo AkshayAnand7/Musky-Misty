@@ -196,23 +196,6 @@ function apply(){
   }
   shown=INIT;render();
 }
-
-// ---- Fragrance Notes Generator ----
-function getNotes(name){
-  const n=name.toLowerCase();
-  if(n.includes('oud')||n.includes('abyad')||n.includes('kuwaity'))return{top:'Saffron, Bergamot',mid:'Oud, Rose, Amber',base:'Musk, Sandalwood'};
-  if(n.includes('baccarat'))return{top:'Jasmine, Saffron',mid:'Cedar, Amberwood',base:'Fir Resin, Musk'};
-  if(n.includes('sauvage'))return{top:'Pepper, Bergamot',mid:'Lavender, Geranium',base:'Ambroxan, Cedar'};
-  if(n.includes('aventus')||n.includes('creed'))return{top:'Pineapple, Bergamot',mid:'Birch, Rose',base:'Musk, Vanilla'};
-  if(n.includes('opium'))return{top:'Coffee, Pink Pepper',mid:'Jasmine, Orange Blossom',base:'Vanilla, Cedar'};
-  if(n.includes('vanilla')||n.includes('chocolate')||n.includes('biscuit'))return{top:'Vanilla, Caramel',mid:'Tonka Bean, Cocoa',base:'Musk, Amber'};
-  if(n.includes('sandal')||n.includes('mysore'))return{top:'Cardamom, Bergamot',mid:'Sandalwood, Rose',base:'Musk, Cedar'};
-  if(n.includes('rose')||n.includes('flora'))return{top:'Rose, Peony',mid:'Jasmine, Osmanthus',base:'Patchouli, Musk'};
-  if(n.includes('blue')||n.includes('aqua')||n.includes('aqva')||n.includes('cool'))return{top:'Citrus, Sea Notes',mid:'Lavender, Rosemary',base:'Cedar, White Musk'};
-  if(n.includes('tom ford')||n.includes('tuscan'))return{top:'Raspberry, Saffron',mid:'Leather, Jasmine',base:'Amber, Oud'};
-  return{top:'Citrus, Bergamot',mid:'Jasmine, Amber',base:'Musk, Sandalwood'};
-}
-
 // ---- Product Detail ----
 let sel=null;
 function openPD(i){
@@ -220,12 +203,7 @@ function openPD(i){
   // Image
   pdImg.innerHTML=`<img src="${getImagePath(sel.name)}" alt="${sel.name}" style="width:80%;height:80%;object-fit:contain" onerror="this.onerror=null;this.src='assets/images/perfume-bottle.png'">`;
   pdNm.textContent=sel.name;
-  // Notes
-  const notes=getNotes(sel.name);
-  pdNotes.innerHTML=`
-    <div class="pd-note"><div class="pd-note-type">Top</div><div class="pd-note-val">${notes.top}</div></div>
-    <div class="pd-note"><div class="pd-note-type">Heart</div><div class="pd-note-val">${notes.mid}</div></div>
-    <div class="pd-note"><div class="pd-note-type">Base</div><div class="pd-note-val">${notes.base}</div></div>`;
+
   // Sizes
   const sz=[];
   if(sel.p30)sz.push({l:'30ml',p:sel.p30});if(sel.p50)sz.push({l:'50ml',p:sel.p50});if(sel.p100)sz.push({l:'100ml',p:sel.p100});
