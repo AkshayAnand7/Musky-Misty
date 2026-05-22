@@ -1,0 +1,27 @@
+{
+  "name": "musky-misty",
+  "version": "1.0.0",
+  "description": "Musky & Misty - Premium Inspired Fragrances",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AkshayAnand7/Musky-Misty.git"
+  },
+  "keywords": [
+    "fragrances",
+    "perfumes",
+    "vercel"
+  ],
+  "author": "Musky & Misty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AkshayAnand7/Musky-Misty/issues"
+  },
+  "homepage": "https://github.com/AkshayAnand7/Musky-Misty#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
