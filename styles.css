@@ -142,7 +142,6 @@ h3{font-weight:500;font-size:1.25rem;letter-spacing:0}
 .product-card:hover{border-color:var(--border-hover);transform:translateY(-8px);box-shadow:0 24px 64px rgba(26,26,26,.07)}
 .product-card-visual{position:relative;aspect-ratio:1/1;background:var(--bg-alt);overflow:hidden;display:flex;align-items:center;justify-content:center}
 .product-card-img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
-.img-contain{object-fit:contain !important;padding:20px}
 .product-card:hover .product-card-img{transform:scale(1.06)}
 .product-card-badge{position:absolute;top:16px;left:16px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);background:rgba(248,245,240,.92);backdrop-filter:blur(8px);padding:5px 14px;border-radius:var(--r-full);z-index:2}
 .btn-view-overlay{position:absolute;bottom:0;left:0;right:0;padding:14px;text-align:center;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#fff;background:rgba(26,26,26,.8);backdrop-filter:blur(12px);transform:translateY(100%);transition:transform .4s var(--ease);z-index:2}
