@@ -1,13 +1,18 @@
-# Project specific
+# Source images (not needed in production)
 Perfume_/
+Perfume -*/
+
+# Conversion/temp scripts
+convert_ps.ps1
+convert-images.js
+verify.js
 *.py
-verify_images.py
-process_images.py
-convert_images.py
 
 # System/IDE
 .DS_Store
 Thumbs.db
 .gemini/
 .vscode/
+
+# Dependencies
 node_modules/
