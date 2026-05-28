@@ -101,7 +101,6 @@ const products = [
   {no:95,name:"Royal Mirage",p30:250,p50:420,p100:680,cat:"fresh-citrus"},
   {no:96,name:"Sandal",p30:280,p50:470,p100:780,cat:"luxury"},
   {no:97,name:"Sandal FT",p30:410,p50:680,p100:2000,cat:"luxury"},
-  {no:98,name:"Shabaya",p30:230,p50:390,p100:620,cat:"fruity-floral"},
   {no:99,name:"Shurooq",p30:240,p50:400,p100:650,cat:"fruity-floral"},
   {no:100,name:"Signature",p30:260,p50:430,p100:710,cat:"fruity-floral"},
   {no:101,name:"Solid Dubai",p30:300,p50:500,p100:840,cat:"oud-wood"},
