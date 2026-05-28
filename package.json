@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/AkshayAnand7/Musky-Misty#readme",
   "dependencies": {
-    "@vercel/speed-insights": "^2.0.0"
+    "@vercel/speed-insights": "^2.0.0",
+    "sharp": "^0.34.5"
   }
 }
