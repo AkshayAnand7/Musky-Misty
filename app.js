@@ -4,7 +4,7 @@
    ======================================== */
 
 const products = [
-  {no:1,name:"Adidas",p30:200,p50:340,p100:520,cat:"fresh-citrus"},
+  {no:1,name:"Adidas",p30:200,p50:340,p100:520,cat:"fruity-floral"},
   {no:2,name:"Afnan 9pm",p30:310,p50:520,p100:880,cat:"fruity-floral"},
   {no:3,name:"Ameer Al Oud",p30:290,p50:480,p100:800,cat:"oud-wood"},
   {no:4,name:"Anar Musk",p30:470,p50:780,p100:1400,cat:"fruity-floral"},
@@ -14,7 +14,7 @@ const products = [
   {no:8,name:"Aseel",p30:240,p50:400,p100:650,cat:"oud-wood"},
   {no:9,name:"Azzaro Most Wanted",p30:330,p50:550,p100:940,cat:"oud-wood"},
   {no:10,name:"Baccarat Rouge",p30:290,p50:480,p100:800,cat:"oud-wood"},
-  {no:11,name:"Bin Sheikh",p30:560,p50:930,p100:1700,cat:"luxury"},
+  {no:11,name:"Bin Sheikh",p30:560,p50:930,p100:1700,cat:"oud-wood"},
   {no:12,name:"Binth Shukri",p30:250,p50:420,p100:780,cat:"fruity-floral"},
   {no:13,name:"Biscuit",p30:190,p50:310,p100:460,cat:"fruity-floral"},
   {no:14,name:"Black Opium",p30:320,p50:530,p100:900,cat:"fruity-floral"},
@@ -99,7 +99,7 @@ const products = [
   {no:93,name:"Purple Oud",p30:340,p50:570,p100:980,cat:"fresh-citrus"},
   {no:94,name:"Royal Black",p30:360,p50:600,p100:1050,cat:"oud-wood"},
   {no:95,name:"Royal Mirage",p30:250,p50:420,p100:680,cat:"fresh-citrus"},
-  {no:96,name:"Sandal",p30:280,p50:470,p100:780,cat:"oud-wood"},
+  {no:96,name:"Sandal",p30:280,p50:470,p100:780,cat:"luxury"},
   {no:97,name:"Sandal FT",p30:410,p50:680,p100:2000,cat:"luxury"},
   {no:98,name:"Shabaya",p30:230,p50:390,p100:620,cat:"fruity-floral"},
   {no:99,name:"Shurooq",p30:240,p50:400,p100:650,cat:"fruity-floral"},
@@ -108,7 +108,7 @@ const products = [
   {no:102,name:"Sweet Burberry",p30:470,p50:780,p100:1400,cat:"luxury"},
   {no:103,name:"Swiss Musk",p30:1250,p50:2080,p100:4000,cat:"fruity-floral"},
   {no:104,name:"Tam Dao",p30:650,p50:1080,p100:2000,cat:"oud-wood"},
-  {no:105,name:"Tobacco Vanilla",p30:560,p50:930,p100:1700,cat:"luxury"},
+  {no:105,name:"Tobacco Vanilla",p30:560,p50:930,p100:1700,cat:"fruity-floral"},
   {no:106,name:"Noir Extreme",p30:360,p50:600,p100:1050,cat:"luxury"},
   {no:107,name:"Tuscan Leather",p30:270,p50:450,p100:740,cat:"luxury"},
   {no:108,name:"Vanilla",p30:210,p50:340,p100:530,cat:"fruity-floral"},
