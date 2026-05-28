@@ -107,7 +107,7 @@ const products = [
   {no:102,name:"Sweet Burberry",p30:470,p50:780,p100:1400,cat:"luxury"},
   {no:103,name:"Swiss Musk",p30:1250,p50:2080,p100:4000,cat:"fruity-floral"},
   {no:104,name:"Tam Dao",p30:650,p50:1080,p100:2000,cat:"oud-wood"},
-  {no:105,name:"Tobacco Vanilla",p30:560,p50:930,p100:1700,cat:"fruity-floral"},
+  {no:105,name:"Tobacco Vanilla",p30:560,p50:930,p100:1700,cat:"luxury"},
   {no:106,name:"Noir Extreme",p30:360,p50:600,p100:1050,cat:"luxury"},
   {no:107,name:"Tuscan Leather",p30:270,p50:450,p100:740,cat:"luxury"},
   {no:108,name:"Vanilla",p30:210,p50:340,p100:530,cat:"fruity-floral"},
