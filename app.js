@@ -171,6 +171,7 @@ function render(){
       <div class="product-card-visual">
         <span class="product-card-badge">INSPIRED</span>
         <img src="${getImagePath(p.name)}" alt="${p.name}" class="product-card-img" onerror="this.onerror=null;this.src='assets/images/perfume-bottle.png'">
+        <span class="img-disclaimer">*Image is for display purpose only</span>
         <span class="btn-view-overlay">VIEW DETAILS</span>
       </div>
       <div class="product-card-info">
@@ -204,7 +205,7 @@ let sel=null;
 function openPD(i){
   sel=products[i];if(!sel)return;
   // Image
-  pdImg.innerHTML=`<img src="${getImagePath(sel.name)}" alt="${sel.name}" style="width:80%;height:80%;object-fit:contain" onerror="this.onerror=null;this.src='assets/images/perfume-bottle.png'">`;
+  pdImg.innerHTML=`<img src="${getImagePath(sel.name)}" alt="${sel.name}" style="width:80%;height:80%;object-fit:contain" onerror="this.onerror=null;this.src='assets/images/perfume-bottle.png'"><span class="img-disclaimer pd-disclaimer">*Image is for display purpose only</span>`;
   pdNm.textContent=sel.name;
 
   // Sizes
@@ -219,6 +220,7 @@ function openPD(i){
     <div class="product-card" onclick="openPD(${p.no-1})">
       <div class="product-card-visual">
         <img src="${getImagePath(p.name)}" alt="${p.name}" class="product-card-img" onerror="this.onerror=null;this.src='assets/images/perfume-bottle.png'">
+        <span class="img-disclaimer">*Image is for display purpose only</span>
         <span class="btn-view-overlay">VIEW DETAILS</span>
       </div>
       <div class="product-card-info"><h3 class="product-card-name">${p.name}</h3><p class="product-card-price-start">From <span>₹${p.p30}</span></p></div>
