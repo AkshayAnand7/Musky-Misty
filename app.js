@@ -114,7 +114,11 @@ const products = [
   {no:108,name:"Vanilla",p30:210,p50:340,p100:530,cat:"fruity-floral"},
   {no:109,name:"Vanilla Candy",p30:400,p50:670,p100:1180,cat:"fruity-floral"},
   {no:110,name:"Versace Eros",p30:230,p50:370,p100:600,cat:"luxury"},
-  {no:111,name:"White Oud",p30:350,p50:580,p100:1000,cat:"oud-wood"}
+  {no:111,name:"White Oud",p30:350,p50:580,p100:1000,cat:"oud-wood"},
+  {no:112,name:"LV Imagination",p30:560,p50:930,p100:1700,cat:"fresh-citrus"},
+  {no:113,name:"24 Carrot Gold",p30:1100,p50:1830,p100:3500,cat:"fruity-floral"},
+  {no:114,name:"AHL",p30:650,p50:1100,p100:2000,cat:"fruity-floral"},
+  {no:115,name:"MOUSUF",p30:420,p50:700,p100:1300,cat:"oud-wood"}
 ];
 
 // ---- Helpers ----
