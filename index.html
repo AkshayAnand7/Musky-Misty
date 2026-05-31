@@ -17,6 +17,8 @@
 
   <!-- Theme & Favicon -->
   <meta name="theme-color" content="#1A1A1A">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' https://cdn.vercel-insights.com 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://vitals.vercel-insights.com https://*.vercel-insights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://wa.me https://www.instagram.com mailto:;">
   <link rel="icon" type="image/jpeg" href="favicon.jpg">
   <link rel="apple-touch-icon" href="favicon.jpg">
 
@@ -66,9 +68,7 @@
   <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
   <!-- Vercel Speed Insights -->
-  <script>
-    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-  </script>
+  <script defer src="si-init.js"></script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
 
   <!-- JSON-LD Structured Data -->
