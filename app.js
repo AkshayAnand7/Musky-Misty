@@ -356,6 +356,7 @@ document.querySelectorAll('[data-product]').forEach(a=>{
 
 // ---- Init ----
 document.addEventListener('DOMContentLoaded',()=>{
+  if(document.documentElement.classList.contains('maintenance')) return;
   render();
   checkNav();
 });

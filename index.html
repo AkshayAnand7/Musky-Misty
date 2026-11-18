@@ -65,6 +65,12 @@
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
+  <!-- Maintenance Mode Control -->
+  <script>
+    var MAINTENANCE_MODE = true;
+    if (MAINTENANCE_MODE) document.documentElement.classList.add('maintenance');
+  </script>
+
   <!-- Vercel Web Analytics -->
   <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
 
@@ -126,6 +132,18 @@
 </head>
 
 <body>
+  <!-- Maintenance Screen -->
+  <div class="maintenance-screen" id="maintenanceScreen">
+    <div class="maintenance-bg-orb"></div>
+    <div class="maintenance-content">
+      <p class="maintenance-brand">MUSKY & MISTY</p>
+      <h1 class="maintenance-title">Temporarily Unavailable</h1>
+      <h2 class="maintenance-subtitle">We'll Be Back Soon.</h2>
+      <p class="maintenance-message">We're making a few improvements to bring you a better fragrance experience.</p>
+      <p class="maintenance-thanks">Thank you for your patience.</p>
+    </div>
+  </div>
+
   <div class="scroll-progress" id="scrollProgress"></div>
 
   <!-- NAV -->

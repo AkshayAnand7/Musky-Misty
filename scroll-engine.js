@@ -272,6 +272,7 @@
 
   // ---- Init everything ----
   document.addEventListener('DOMContentLoaded', () => {
+    if(document.documentElement.classList.contains('maintenance')) return;
     initReveals();
     splitText();
     initCounters();
